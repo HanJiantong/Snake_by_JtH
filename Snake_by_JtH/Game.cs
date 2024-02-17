@@ -32,7 +32,7 @@ namespace Snake
                     Console.Clear();
                     Console.Write("游戏\n------------------------------------------------------------------------------------------------------\n");
 
-                    for (Int16 i = 0; i < 25;  i++)
+                    for (Int16 i = 0; i < 25; i++)
                     {
                         Console.Write("|");
 
@@ -45,7 +45,7 @@ namespace Snake
                                     food_i = -1;
                                     food_j = -1;
                                     score++;
-                                    Console.Beep(750, 100);
+                                    Console.Beep();
                                 }
                                 else
                                 {

@@ -10,7 +10,7 @@ namespace Snake
         {
             Console.Title = "Snake";
             Console.CursorVisible = false;
-            
+
             while (true)
             {
                 Int32 n = Snake.Menu.MainMenu();
