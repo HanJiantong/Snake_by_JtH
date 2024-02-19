@@ -1,32 +1,32 @@
 ﻿using System;
 
-namespace Snake
+namespace Snake_by_JtH
 {
     class Game
     {
         public static Int32 MainGame()
         {
-            Int16[,] list = new Int16[26, 51];
-            Int16 direction = 0, longth = 2, score = 0;
-            list[12, 24] = 2;
-            list[13, 24] = 1;
-            Boolean alive = true;
-            Int16 head_i = 12, head_j = 24;
-            Int16 food_i = -1, food_j = -1;
-            Boolean longth_changed = false;
+            Int16[,] List = new Int16[26, 51];
+            Int16 Direction = 0, Length = 2, Score = 0;
+            List[12, 24] = 2;
+            List[13, 24] = 1;
+            Boolean Alive = true;
+            Int16 Head_i = 12, Head_j = 24;
+            Int16 Food_i = -1, Food_j = -1;
+            Boolean Length_changed = false;
             Int16 k = 0;
 
-            while (alive)
+            while (Alive)
             {
                 k++;
 
-                if (food_i == -1 && food_j == -1)
+                if (Food_i == -1 && Food_j == -1)
                 {
-                    food_i = (Int16)new Random().Next(2, 23);
-                    food_j = (Int16)new Random().Next(2, 48);
+                    Food_i = (Int16)new Random().Next(2, 23);
+                    Food_j = (Int16)new Random().Next(2, 48);
                 }
 
-                if (k == Program.t)
+                if (k == Program.Speed)
                 {
                     k = 0;
                     Console.Clear();
@@ -38,44 +38,58 @@ namespace Snake
 
                         for (Int16 j = 0; j < 50; j++)
                         {
-                            if (i == food_i && j == food_j)
+                            if (i == Food_i && j == Food_j)
                             {
-                                if (list[i, j] > 0)
+                                if (List[i, j] > 0)
                                 {
-                                    food_i = -1;
-                                    food_j = -1;
-                                    score++;
+                                    Food_i = -1;
+                                    Food_j = -1;
+                                    Score++;
                                     Console.Beep();
                                 }
                                 else
                                 {
-                                    Console.Write("■ ");
+                                    if (Program.Unicode)
+                                    {
+                                        Console.Write("■ ");
+                                    }
+                                    else
+                                    {
+                                        Console.Write("~ ");
+                                    }
                                 }
                             }
 
-                            if (list[i, j] == longth)
+                            if (List[i, j] == Length)
                             {
-                                if (longth_changed)
+                                if (Length_changed)
                                 {
-                                    ++list[i, j];
+                                    ++List[i, j];
                                 }
 
-                                head_i = i;
-                                head_j = j;
-                                Console.Write("██");
-                                list[i, j]--;
-                            }
-                            else if (list[i, j] > 0 && list[i, j] < longth)
-                            {
-                                if (longth_changed)
+                                Head_i = i;
+                                Head_j = j;
+                                if (Program.Unicode)
                                 {
-                                    list[i, j]++;
+                                    Console.Write("██");
+                                }
+                                else
+                                {
+                                    Console.Write("><");
+                                }
+                                List[i, j]--;
+                            }
+                            else if (List[i, j] > 0 && List[i, j] < Length)
+                            {
+                                if (Length_changed)
+                                {
+                                    List[i, j]++;
                                 }
 
                                 Console.Write("[]");
-                                list[i, j]--;
+                                List[i, j]--;
                             }
-                            else if (!(i == food_i && j == food_j))
+                            else if (!(i == Food_i && j == Food_j))
                             {
                                 Console.Write("  ");
                             }
@@ -85,59 +99,59 @@ namespace Snake
                     }
 
                     Console.WriteLine("------------------------------------------------------------------------------------------------------");
-                    Console.WriteLine("分数：{0}", score);
+                    Console.WriteLine("分数：{0}", Score.ToString("D5"));
 
-                    if (direction == 0)
+                    if (Direction == 0)
                     {
-                        if ((head_i - 1 < 0 || list[head_i - 1, head_j] != 0) && !longth_changed)
+                        if ((Head_i - 1 < 0 || List[Head_i - 1, Head_j] != 0) && !Length_changed)
                         {
-                            alive = false;
+                            Alive = false;
                         }
                         else
                         {
-                            list[head_i - 1, head_j] = longth;
+                            List[Head_i - 1, Head_j] = Length;
                         }
                     }
-                    else if (direction == 1)
+                    else if (Direction == 1)
                     {
-                        if ((head_j - 1 < 0 || list[head_i, head_j - 1] != 0) && !longth_changed)
+                        if ((Head_j - 1 < 0 || List[Head_i, Head_j - 1] != 0) && !Length_changed)
                         {
-                            alive = false;
+                            Alive = false;
                         }
                         else
                         {
-                            list[head_i, head_j - 1] = longth;
+                            List[Head_i, Head_j - 1] = Length;
                         }
                     }
-                    else if (direction == 2)
+                    else if (Direction == 2)
                     {
-                        if ((head_i + 1 > 24 || list[head_i + 1, head_j] != 0) && !longth_changed)
+                        if ((Head_i + 1 > 24 || List[Head_i + 1, Head_j] != 0) && !Length_changed)
                         {
-                            alive = false;
+                            Alive = false;
                         }
                         else
                         {
-                            list[head_i + 1, head_j] = longth;
+                            List[Head_i + 1, Head_j] = Length;
                         }
                     }
-                    else if (direction == 3)
+                    else if (Direction == 3)
                     {
-                        if ((head_j + 1 > 49 || list[head_i, head_j + 1] != 0) && !longth_changed)
+                        if ((Head_j + 1 > 49 || List[Head_i, Head_j + 1] != 0) && !Length_changed)
                         {
-                            alive = false;
+                            Alive = false;
                         }
                         else
                         {
-                            list[head_i, head_j + 1] = longth;
+                            List[Head_i, Head_j + 1] = Length;
                         }
                     }
 
-                    longth_changed = false;
+                    Length_changed = false;
 
-                    if (score / 3 > longth - 2)
+                    if (Score / 3 > Length - 2)
                     {
-                        ++longth;
-                        longth_changed = true;
+                        ++Length;
+                        Length_changed = true;
                     }
                 }
 
@@ -145,26 +159,26 @@ namespace Snake
                 {
                     ConsoleKeyInfo key = Console.ReadKey(true);
 
-                    if ((key.Key == ConsoleKey.UpArrow || key.Key == ConsoleKey.W) && direction != 2)
+                    if ((key.Key == ConsoleKey.UpArrow || key.Key == ConsoleKey.W) && Direction != 2)
                     {
-                        direction = 0;
+                        Direction = 0;
                     }
-                    else if ((key.Key == ConsoleKey.LeftArrow || key.Key == ConsoleKey.A) && direction != 3)
+                    else if ((key.Key == ConsoleKey.LeftArrow || key.Key == ConsoleKey.A) && Direction != 3)
                     {
-                        direction = 1;
+                        Direction = 1;
                     }
-                    else if ((key.Key == ConsoleKey.DownArrow || key.Key == ConsoleKey.S) && direction != 0)
+                    else if ((key.Key == ConsoleKey.DownArrow || key.Key == ConsoleKey.S) && Direction != 0)
                     {
-                        direction = 2;
+                        Direction = 2;
                     }
-                    else if ((key.Key == ConsoleKey.RightArrow || key.Key == ConsoleKey.D) && direction != 1)
+                    else if ((key.Key == ConsoleKey.RightArrow || key.Key == ConsoleKey.D) && Direction != 1)
                     {
-                        direction = 3;
+                        Direction = 3;
                     }
                 }
             }
 
-            return score;
+            return Score;
         }
     }
 }

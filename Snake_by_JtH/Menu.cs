@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Snake
+namespace Snake_by_JtH
 {
     class Menu
     {
@@ -15,8 +15,8 @@ namespace Snake
             }
 
             Console.Write("------------------------------------------------------------------------------------------------------\n" + "按下对应数字键以进入");
-            Char key = (Char)Console.ReadKey(true).Key;
-            return (Int32)key - 48;
+            Char Key = (Char)Console.ReadKey(true).Key;
+            return (Int32)Key - 48;
         }
     }
 }

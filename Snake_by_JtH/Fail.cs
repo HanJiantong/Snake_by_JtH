@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace Snake
+namespace Snake_by_JtH
 {
     class Fail
     {
-        public static void MainFail(Int32 score)
+        public static void MainFail(Int32 Score)
         {
             Console.Clear();
             Console.WriteLine("Snake");
@@ -21,7 +21,7 @@ namespace Snake
             Console.WriteLine("|                        |  /|  --| |-\\/- /  \\    |   | |   | /  \\ | _/                              |");
             Console.WriteLine("|                        \\  || /  | | | | |--/    |   | \\  /  |--/  |                                |");
             Console.WriteLine("|                         ---| \\__| | | | \\__     \\___/  \\/   \\__   |                                |");
-            Console.WriteLine("|                                   得分:{0}                                                       |", score.ToString("D5"));
+            Console.WriteLine("|                                   得分:{0}                                                       |", Score.ToString("D5"));
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
