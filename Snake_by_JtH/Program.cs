@@ -27,7 +27,7 @@ namespace Snake_by_JtH
                 }
                 else if (n == 2)
                 {
-                    //Snake.Setting.MainSetting();
+                    Settings.MainSettings();
                 }
             }
 
