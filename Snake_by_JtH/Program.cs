@@ -14,7 +14,7 @@ namespace Snake_by_JtH
 
             while (true)
             {
-                Int32 n = Snake_by_JtH.Menu.MainMenu();
+                Int32 n = Menu.MainMenu();
 
                 if (n == 0)
                 {
@@ -22,8 +22,8 @@ namespace Snake_by_JtH
                 }
                 else if (n == 1)
                 {
-                    Int32 score = Snake_by_JtH.Game.MainGame();
-                    Snake_by_JtH.Fail.MainFail(score);
+                    Int32 score = Game.MainGame();
+                    Fail.MainFail(score);
                 }
                 else if (n == 2)
                 {
