@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\UsersFiles\\JiantHan\\Documents\\C#\\Snake_by_JtH\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FB331750-B44E-4BFC-901F-E1D402FB6D68}|Snake_by_JtH\\Snake_by_JtH.csproj|d:\\usersfiles\\jianthan\\documents\\c#\\snake_by_jth\\snake_by_jth\\snake_by_jth.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FB331750-B44E-4BFC-901F-E1D402FB6D68}|Snake_by_JtH\\Snake_by_JtH.csproj|solutionrelative:snake_by_jth\\snake_by_jth.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FB331750-B44E-4BFC-901F-E1D402FB6D68}|Snake_by_JtH\\Snake_by_JtH.csproj|d:\\usersfiles\\jianthan\\documents\\c#\\snake_by_jth\\snake_by_jth\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB331750-B44E-4BFC-901F-E1D402FB6D68}|Snake_by_JtH\\Snake_by_JtH.csproj|solutionrelative:snake_by_jth\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB331750-B44E-4BFC-901F-E1D402FB6D68}|Snake_by_JtH\\Snake_by_JtH.csproj|d:\\usersfiles\\jianthan\\documents\\c#\\snake_by_jth\\snake_by_jth\\fail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB331750-B44E-4BFC-901F-E1D402FB6D68}|Snake_by_JtH\\Snake_by_JtH.csproj|solutionrelative:snake_by_jth\\fail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB331750-B44E-4BFC-901F-E1D402FB6D68}|Snake_by_JtH\\Snake_by_JtH.csproj|d:\\usersfiles\\jianthan\\documents\\c#\\snake_by_jth\\snake_by_jth\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,14 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FB331750-B44E-4BFC-901F-E1D402FB6D68}|Snake_by_JtH\\Snake_by_JtH.csproj|d:\\usersfiles\\jianthan\\documents\\c#\\snake_by_jth\\snake_by_jth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB331750-B44E-4BFC-901F-E1D402FB6D68}|Snake_by_JtH\\Snake_by_JtH.csproj|solutionrelative:snake_by_jth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB331750-B44E-4BFC-901F-E1D402FB6D68}|Snake_by_JtH\\Snake_by_JtH.csproj|d:\\usersfiles\\jianthan\\documents\\c#\\snake_by_jth\\snake_by_jth\\fail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB331750-B44E-4BFC-901F-E1D402FB6D68}|Snake_by_JtH\\Snake_by_JtH.csproj|solutionrelative:snake_by_jth\\fail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB331750-B44E-4BFC-901F-E1D402FB6D68}|Snake_by_JtH\\Snake_by_JtH.csproj|d:\\usersfiles\\jianthan\\documents\\c#\\snake_by_jth\\snake_by_jth\\snake_by_jth.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FB331750-B44E-4BFC-901F-E1D402FB6D68}|Snake_by_JtH\\Snake_by_JtH.csproj|solutionrelative:snake_by_jth\\snake_by_jth.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 149,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,8 +45,12 @@
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Menu.cs",
               "DocumentMoniker": "D:\\UsersFiles\\JiantHan\\Documents\\C#\\Snake_by_JtH\\Snake_by_JtH\\Menu.cs",
               "RelativeDocumentMoniker": "Snake_by_JtH\\Menu.cs",
@@ -58,44 +62,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Game.cs",
               "DocumentMoniker": "D:\\UsersFiles\\JiantHan\\Documents\\C#\\Snake_by_JtH\\Snake_by_JtH\\Game.cs",
               "RelativeDocumentMoniker": "Snake_by_JtH\\Game.cs",
               "ToolTip": "D:\\UsersFiles\\JiantHan\\Documents\\C#\\Snake_by_JtH\\Snake_by_JtH\\Game.cs",
               "RelativeToolTip": "Snake_by_JtH\\Game.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAywEoAAAAHAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-19T07:08:38.18Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Fail.cs",
               "DocumentMoniker": "D:\\UsersFiles\\JiantHan\\Documents\\C#\\Snake_by_JtH\\Snake_by_JtH\\Fail.cs",
               "RelativeDocumentMoniker": "Snake_by_JtH\\Fail.cs",
               "ToolTip": "D:\\UsersFiles\\JiantHan\\Documents\\C#\\Snake_by_JtH\\Snake_by_JtH\\Fail.cs",
               "RelativeToolTip": "Snake_by_JtH\\Fail.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-17T11:26:26.562Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\UsersFiles\\JiantHan\\Documents\\C#\\Snake_by_JtH\\Snake_by_JtH\\Program.cs",
               "RelativeDocumentMoniker": "Snake_by_JtH\\Program.cs",
               "ToolTip": "D:\\UsersFiles\\JiantHan\\Documents\\C#\\Snake_by_JtH\\Snake_by_JtH\\Program.cs",
               "RelativeToolTip": "Snake_by_JtH\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAtAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-21T11:52:32.327Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Snake_by_JtH.csproj",
               "DocumentMoniker": "D:\\UsersFiles\\JiantHan\\Documents\\C#\\Snake_by_JtH\\Snake_by_JtH\\Snake_by_JtH.csproj",
               "RelativeDocumentMoniker": "Snake_by_JtH\\Snake_by_JtH.csproj",
@@ -103,7 +107,8 @@
               "RelativeToolTip": "Snake_by_JtH\\Snake_by_JtH.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-01-21T11:52:27.082Z"
+              "WhenOpened": "2024-01-21T11:52:27.082Z",
+              "EditorCaption": ""
             }
           ]
         },
