@@ -11,18 +11,18 @@ namespace Snake_by_JtH
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("ÉèÖÃ/ÑÕÉ«ÉèÖÃ");
+                Console.WriteLine("è®¾ç½®/é¢œè‰²è®¾ç½®");
                 Console.WriteLine("------------------------------------------------------------------------------------------------------");
-                Console.WriteLine("|     1 = ºÚÉ«       9 = »ÒÉ«                                                                        |");
-                Console.WriteLine("|     2 = À¶É«       A = µ­À¶É«                                                                      |");
-                Console.WriteLine("|     3 = ÂÌÉ«       B = µ­ÂÌÉ«                                                                      |");
-                Console.WriteLine("|     4 = Ç³ÂÌÉ«     C = µ­Ç³ÂÌÉ«                                                                    |");
-                Console.WriteLine("|     5 = ºìÉ«       D = µ­ºìÉ«                                                                      |");
-                Console.WriteLine("|     6 = ×ÏÉ«       E = µ­×ÏÉ«                                                                      |");
-                Console.WriteLine("|     7 = »ÆÉ«       F = µ­»ÆÉ«                                                                      |");
-                Console.WriteLine("|     8 = °×É«       G = ÁÁ°×É«                                                                      |");
+                Console.WriteLine("|     1 = é»‘è‰²       9 = ç°è‰²                                                                        |");
+                Console.WriteLine("|     2 = è“è‰²       A = æ·¡è“è‰²                                                                      |");
+                Console.WriteLine("|     3 = ç»¿è‰²       B = æ·¡ç»¿è‰²                                                                      |");
+                Console.WriteLine("|     4 = æµ…ç»¿è‰²     C = æ·¡æµ…ç»¿è‰²                                                                    |");
+                Console.WriteLine("|     5 = çº¢è‰²       D = æ·¡çº¢è‰²                                                                      |");
+                Console.WriteLine("|     6 = ç´«è‰²       E = æ·¡ç´«è‰²                                                                      |");
+                Console.WriteLine("|     7 = é»„è‰²       F = æ·¡é»„è‰²                                                                      |");
+                Console.WriteLine("|     8 = ç™½è‰²       G = äº®ç™½è‰²                                                                      |");
                 Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("| 0.·µ»Ø                                                                                             |");
+                Console.WriteLine("| 0.è¿”å›                                                                                             |");
 
                 for (Int32 i = 0; i < 15; ++i)
                 {
@@ -30,7 +30,7 @@ namespace Snake_by_JtH
                 }
 
                 Console.WriteLine("------------------------------------------------------------------------------------------------------");
-                Console.WriteLine("°´ÏÂ¶ÔÓ¦¼üÒÔÑ¡Ôñ");
+                Console.WriteLine("æŒ‰ä¸‹å¯¹åº”é”®ä»¥é€‰æ‹©");
                 Char Key = (Char)Console.ReadKey(true).Key;
 
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
@@ -180,7 +180,7 @@ namespace Snake_by_JtH
         static void About()
         {
             Console.Clear();
-            Console.WriteLine("ÉèÖÃ/¹ØÓÚSnake");
+            Console.WriteLine("è®¾ç½®/å…³äºSnake");
             Console.WriteLine("------------------------------------------------------------------------------------------------------");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
@@ -208,7 +208,7 @@ namespace Snake_by_JtH
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("------------------------------------------------------------------------------------------------------");
-            Console.Write("Çë°´ÈÎÒâ¼ü¼ÌĞø. . .");
+            Console.Write("è¯·æŒ‰ä»»æ„é”®ç»§ç»­. . .");
             Console.ReadKey();
             return;
         }
@@ -218,12 +218,12 @@ namespace Snake_by_JtH
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("ÉèÖÃ");
+                Console.WriteLine("è®¾ç½®");
                 Console.WriteLine("------------------------------------------------------------------------------------------------------");
-                Console.WriteLine("| 1.ÑÕÉ«ÉèÖÃ                                                                                         |");
-                Console.WriteLine("| 2.¹ØÓÚ                                                                                             |");
+                Console.WriteLine("| 1.é¢œè‰²è®¾ç½®                                                                                         |");
+                Console.WriteLine("| 2.å…³äº                                                                                             |");
                 Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("| 0.·µ»Ø                                                                                             |");
+                Console.WriteLine("| 0.è¿”å›                                                                                             |");
                 
                 for (Int32 i = 0; i < 21; i++)
                 {
@@ -231,7 +231,7 @@ namespace Snake_by_JtH
                 }
 
                 Console.WriteLine("------------------------------------------------------------------------------------------------------");
-                Console.WriteLine("°´ÏÂ¶ÔÓ¦Êı×Ö¼üÒÔ½øÈë");
+                Console.WriteLine("æŒ‰ä¸‹å¯¹åº”æ•°å­—é”®ä»¥è¿›å…¥");
                 Char Key = (Char)Console.ReadKey(true).Key;
 
                 if (Key == '1')
