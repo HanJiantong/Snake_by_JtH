@@ -8,10 +8,12 @@ namespace Snake_by_JtH
     {
         static void ColorSettings()
         {
+            // 仅在Windows平台上支持颜色设置
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 while (true)
                 {
+                    // 显示颜色设置菜单
                     Console.Clear();
                     Console.WriteLine("设置/颜色设置");
                     Console.WriteLine("------------------------------------------------------------------------------------------------------");
@@ -35,7 +37,7 @@ namespace Snake_by_JtH
                     Console.WriteLine("按下对应键以选择");
                     Char Key = (Char)Console.ReadKey(true).Key;
 
-
+                    // 根据用户输入更改控制台颜色
                     if (Key == '1')
                     {
                         Process.Start("cmd.exe", "/c color 07");
@@ -100,38 +102,26 @@ namespace Snake_by_JtH
                     {
                         Process.Start("cmd.exe", "/c color F0");
                     }
+                    else if (Key == '0')
+                    {
+                        break;
+                    }
                 }
             }
             else
             {
+                // 非Windows系统显示不支持消息
                 Console.Clear();
                 Console.WriteLine("设置/颜色设置");
                 Console.WriteLine("------------------------------------------------------------------------------------------------------");
                 Console.WriteLine("|                                                                                                    |");
                 Console.WriteLine("|     错误：本功能暂不支持非Windows系统                                                                 |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|                                                                                                    |");
+                
+                for (Int32 i = 0; i < 22; ++i)
+                {
+                    Console.WriteLine("|                                                                                                    |");
+                }
+
                 Console.WriteLine("------------------------------------------------------------------------------------------------------");
                 Console.Write("请按任意键继续. . .");
                 Console.ReadKey();
@@ -179,6 +169,7 @@ namespace Snake_by_JtH
 
         static void SpeedSettings()
         {
+            // TODO: 实现速度设置功能
             while (true)
             {
                 
@@ -189,6 +180,7 @@ namespace Snake_by_JtH
         {
             while (true)
             {
+                // 显示设置主菜单
                 Console.Clear();
                 Console.WriteLine("设置");
                 Console.WriteLine("------------------------------------------------------------------------------------------------------");
@@ -206,6 +198,7 @@ namespace Snake_by_JtH
                 Console.WriteLine("按下对应数字键以进入");
                 Char Key = (Char)Console.ReadKey(true).Key;
 
+                // 根据用户输入进入相应的设置选项
                 if (Key == '1')
                 {
                     ColorSettings();
