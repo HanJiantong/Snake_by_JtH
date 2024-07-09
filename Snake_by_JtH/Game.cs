@@ -162,7 +162,18 @@ namespace Snake_by_JtH
                     {
                         Direction = 0;
                     }
-                    // 其他方向的输入处理类似
+                    else if ((key.Key == ConsoleKey.LeftArrow || key.Key == ConsoleKey.A) && Direction != 3)
+                    {
+                        Direction = 1;
+                    }
+                    else if ((key.Key == ConsoleKey.DownArrow || key.Key == ConsoleKey.S) && Direction != 0)
+                    {
+                        Direction = 2;
+                    }
+                    else if ((key.Key == ConsoleKey.RightArrow || key.Key == ConsoleKey.D) && Direction != 1)
+                    {
+                        Direction = 3;
+                    }
                 }
             }
 
