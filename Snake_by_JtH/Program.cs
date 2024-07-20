@@ -5,16 +5,16 @@ namespace Snake_by_JtH
 {
     class Program
     {
-        // ÓÎÏ·°æ±¾
+        // æ¸¸æˆç‰ˆæœ¬
         public static String Version = "";
-        // ÓÎÏ·ËÙ¶ÈÉèÖÃ,ÖµÔ½Ğ¡ÓÎÏ·Ô½¿ì
+        // æ¸¸æˆé€Ÿåº¦è®¾ç½®,å€¼è¶Šå°æ¸¸æˆè¶Šå¿«
         public static Int32 Speed = 8000;
-        // ÊÇ·ñÊ¹ÓÃUnicode×Ö·û
+        // æ˜¯å¦ä½¿ç”¨Unicodeå­—ç¬¦
         public static Boolean Unicode = true;
 
         static void Main(String[] args)
         {
-            // ³¢ÊÔ¶ÁÈ¡VERSIONÎÄ¼ş²¢Ğ´ÈëVersion±äÁ¿
+            // å°è¯•è¯»å–VERSIONæ–‡ä»¶å¹¶å†™å…¥Versionå˜é‡
             try
             {
                 Version = File.ReadAllText(@"./VERSION");
@@ -22,44 +22,44 @@ namespace Snake_by_JtH
             catch { }
 
 
-            // ¼ì²éSettingsÎÄ¼ş¼ĞÊÇ·ñ´æÔÚ,²»´æÔÚÔò´´½¨
+            // æ£€æŸ¥Settingsæ–‡ä»¶å¤¹æ˜¯å¦å­˜åœ¨,ä¸å­˜åœ¨åˆ™åˆ›å»º
             if (!File.Exists(@"./Settings/"))
             {
-                DirectoryInfo DI = Directory.CreateDirectory(@"./Settings/");
+                Directory.CreateDirectory(@"./Settings/");
             }
 
-            // ¼ì²éSpeedÎÄ¼şÊÇ·ñ´æÔÚ,²»´æÔÚÔò´´½¨
+            // æ£€æŸ¥Speedæ–‡ä»¶æ˜¯å¦å­˜åœ¨,ä¸å­˜åœ¨åˆ™åˆ›å»º
             if (!File.Exists(@"./Settings/Speed"))
             {
                 File.WriteAllText(@"./Settings/Speed", "10000");
             }
 
-            // ¶ÁÈ¡SpeedÎÄ¼ş²¢Ğ´ÈëSpeed±äÁ¿
+            // è¯»å–Speedæ–‡ä»¶å¹¶å†™å…¥Speedå˜é‡
             Speed = Convert.ToInt32(File.ReadAllText(@"./Settings/Speed"));
 
-            // ÉèÖÃ¿ØÖÆÌ¨±êÌâºÍÒş²Ø¹â±ê
+            // è®¾ç½®æ§åˆ¶å°æ ‡é¢˜å’Œéšè—å…‰æ ‡
             Console.Title = "Snake";
             Console.CursorVisible = false;
 
-            // Ö÷ÓÎÏ·Ñ­»·
+            // ä¸»æ¸¸æˆå¾ªç¯
             while (true)
             {
-                // ÏÔÊ¾Ö÷²Ëµ¥²¢»ñÈ¡ÓÃ»§Ñ¡Ôñ
+                // æ˜¾ç¤ºä¸»èœå•å¹¶è·å–ç”¨æˆ·é€‰æ‹©
                 Int32 n = Menu.MainMenu();
 
                 if (n == 0)
                 {
-                    break; // ÍË³öÓÎÏ·
+                    break; // é€€å‡ºæ¸¸æˆ
                 }
                 else if (n == 1)
                 {
-                    // ¿ªÊ¼ĞÂÓÎÏ·
+                    // å¼€å§‹æ–°æ¸¸æˆ
                     Int32 score = Game.MainGame();
                     Fail.MainFail(score);
                 }
                 else if (n == 2)
                 {
-                    // ½øÈëÉèÖÃ²Ëµ¥
+                    // è¿›å…¥è®¾ç½®èœå•
                     Settings.MainSettings();
                 }
             }
