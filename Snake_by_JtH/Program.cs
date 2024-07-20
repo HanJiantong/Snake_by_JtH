@@ -8,7 +8,7 @@ namespace Snake_by_JtH
         // 游戏版本
         public static String Version = "";
         // 游戏速度设置,值越小游戏越快
-        public static Int32 Speed = 10000;
+        public static Int32 Speed = 8000;
         // 是否使用Unicode字符
         public static Boolean Unicode = true;
 

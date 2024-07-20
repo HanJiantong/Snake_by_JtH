@@ -170,7 +170,7 @@ namespace Snake_by_JtH
 
         static void SpeedSettings()
         {
-            String CurrentSpeed = (Program.Speed == 5000 ? 9 : 9 - (Program.Speed / 10000)).ToString();
+            String CurrentSpeed = (9 - (Int32)(Math.Log(Program.Speed / 1000) / Math.Log(2))).ToString();
             Console.Clear();
             Console.WriteLine("设置/速度设置");
             Console.WriteLine("------------------------------------------------------------------------------------------------------");
@@ -183,7 +183,7 @@ namespace Snake_by_JtH
             }
 
             Console.WriteLine("------------------------------------------------------------------------------------------------------");
-            Program.Speed = (Int32)Console.ReadKey(true).Key - 48 == 9 ? 5000 : (57 - (Int32)Console.ReadKey(true).Key) * 10000;
+            Program.Speed = (Int32)Math.Pow(2, 57 - (Int32)Console.ReadKey(true).Key) * 1000;
             File.WriteAllText(@"./Settings/Speed", Program.Speed.ToString());
         }
 
