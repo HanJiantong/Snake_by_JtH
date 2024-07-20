@@ -15,7 +15,7 @@ namespace Snake_by_JtH
             Int16 Head_i = 12, Head_j = 24; // 蛇头坐标
             Int16 Food_i = -1, Food_j = -1; // 食物坐标
             Boolean Length_changed = false; // 蛇长度是否改变
-            Int16 k = 0; // 用于控制游戏速度的计数器
+            Int32 k = 0; // 用于控制游戏速度的计数器
 
             while (Alive)
             {

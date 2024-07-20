@@ -5,23 +5,37 @@ namespace Snake_by_JtH
 {
     class Program
     {
+        // 游戏版本
+        public static String Version = "";
         // 游戏速度设置,值越小游戏越快
-        public static Int16 Speed = 10000;
+        public static Int32 Speed = 10000;
         // 是否使用Unicode字符
         public static Boolean Unicode = true;
 
         static void Main(String[] args)
         {
+            // 尝试读取VERSION文件并写入Version变量
+            try
+            {
+                Version = File.ReadAllText(@"./VERSION");
+            }
+            catch { }
+
+
+            // 检查Settings文件夹是否存在,不存在则创建
+            if (!File.Exists(@"./Settings/"))
+            {
+                DirectoryInfo DI = Directory.CreateDirectory(@"./Settings/");
+            }
+
             // 检查Speed文件是否存在,不存在则创建
-            if (!File.Exists("./Speed"))
+            if (!File.Exists(@"./Settings/Speed"))
             {
-                FileStream FS = File.Create("./Speed");
-                FS.Close();
+                File.WriteAllText(@"./Settings/Speed", "10000");
             }
-            else
-            {
-                // TODO: 读取Speed文件内容
-            }
+
+            // 读取Speed文件并写入Speed变量
+            Speed = Convert.ToInt32(File.ReadAllText(@"./Settings/Speed"));
 
             // 设置控制台标题和隐藏光标
             Console.Title = "Snake";

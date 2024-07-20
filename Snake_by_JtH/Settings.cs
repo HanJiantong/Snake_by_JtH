@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 
@@ -117,7 +118,7 @@ namespace Snake_by_JtH
                 Console.WriteLine("|                                                                                                    |");
                 Console.WriteLine("|     错误：本功能暂不支持非Windows系统                                                                 |");
                 
-                for (Int32 i = 0; i < 22; ++i)
+                for (Int32 i = 0; i < 23; ++i)
                 {
                     Console.WriteLine("|                                                                                                    |");
                 }
@@ -144,7 +145,7 @@ namespace Snake_by_JtH
             Console.WriteLine("|                            \\ |--\\   --| |/  /  \\                                                   |");
             Console.WriteLine("|                            | |   | /  | |\\  |--/                                                   |");
             Console.WriteLine("|                        \\---/ |   | \\__| | \\ \\__                                                    |");
-            Console.WriteLine("|      Snake V0.1.0                                                                                  |");
+            Console.WriteLine($"|      Snake v{Program.Version}                                                                                  |");
             Console.WriteLine("|                by JtH                                                                              |");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
@@ -169,11 +170,21 @@ namespace Snake_by_JtH
 
         static void SpeedSettings()
         {
-            // TODO: 实现速度设置功能
-            while (true)
+            String CurrentSpeed = (Program.Speed == 5000 ? 9 : 9 - (Program.Speed / 10000)).ToString();
+            Console.Clear();
+            Console.WriteLine("设置/速度设置");
+            Console.WriteLine("------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                                                                                    |");
+            Console.WriteLine($"|     请输入一位整数(0: 最慢  9: 最快)        当前速度: {CurrentSpeed}                                            |");
+
+            for (Int32 i = 0; i < 23; ++i)
             {
-                
+                Console.WriteLine("|                                                                                                    |");
             }
+
+            Console.WriteLine("------------------------------------------------------------------------------------------------------");
+            Program.Speed = (Int32)Console.ReadKey(true).Key - 48 == 9 ? 5000 : (57 - (Int32)Console.ReadKey(true).Key) * 10000;
+            File.WriteAllText(@"./Settings/Speed", Program.Speed.ToString());
         }
 
         public static void MainSettings()
@@ -185,11 +196,12 @@ namespace Snake_by_JtH
                 Console.WriteLine("设置");
                 Console.WriteLine("------------------------------------------------------------------------------------------------------");
                 Console.WriteLine("| 1.颜色设置                                                                                         |");
-                Console.WriteLine("| 2.关于                                                                                             |");
+                Console.WriteLine("| 2.速度设置                                                                                         |");
+                Console.WriteLine("| 3.关于                                                                                             |");
                 Console.WriteLine("|                                                                                                    |");
                 Console.WriteLine("| 0.返回                                                                                             |");
                 
-                for (Int32 i = 0; i < 21; i++)
+                for (Int32 i = 0; i < 20; i++)
                 {
                     Console.WriteLine("|                                                                                                    |");
                 }
@@ -204,6 +216,10 @@ namespace Snake_by_JtH
                     ColorSettings();
                 }
                 else if (Key == '2')
+                {
+                    SpeedSettings();
+                }
+                else if (Key == '3')
                 {
                     About();
                 }
