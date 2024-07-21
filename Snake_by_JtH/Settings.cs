@@ -17,7 +17,7 @@ namespace Snake_by_JtH
                     // 显示颜色设置菜单
                     Console.Clear();
                     Console.WriteLine("设置/颜色设置");
-                    Console.WriteLine("------------------------------------------------------------------------------------------------------");
+                    Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
                     Console.WriteLine("|     1 = 黑色       9 = 灰色                                                                        |");
                     Console.WriteLine("|     2 = 蓝色       A = 淡蓝色                                                                      |");
                     Console.WriteLine("|     3 = 绿色       B = 淡绿色                                                                      |");
@@ -34,7 +34,7 @@ namespace Snake_by_JtH
                         Console.WriteLine("|                                                                                                    |");
                     }
 
-                    Console.WriteLine("------------------------------------------------------------------------------------------------------");
+                    Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
                     Console.WriteLine("按下对应键以选择");
                     Char Key = (Char)Console.ReadKey(true).Key;
 
@@ -114,16 +114,16 @@ namespace Snake_by_JtH
                 // 非Windows系统显示不支持消息
                 Console.Clear();
                 Console.WriteLine("设置/颜色设置");
-                Console.WriteLine("------------------------------------------------------------------------------------------------------");
+                Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
                 Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|     错误：本功能暂不支持非Windows系统                                                                 |");
+                Console.WriteLine("|     错误: 本功能暂不支持非Windows系统                                                              |");
                 
                 for (Int32 i = 0; i < 23; ++i)
                 {
                     Console.WriteLine("|                                                                                                    |");
                 }
 
-                Console.WriteLine("------------------------------------------------------------------------------------------------------");
+                Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
                 Console.Write("请按任意键继续. . .");
                 Console.ReadKey();
                 return;
@@ -136,7 +136,7 @@ namespace Snake_by_JtH
         {
             Console.Clear();
             Console.WriteLine("设置/关于Snake");
-            Console.WriteLine("------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                         ___                                                                        |");
@@ -162,7 +162,7 @@ namespace Snake_by_JtH
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
-            Console.WriteLine("------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
             Console.Write("请按任意键继续. . .");
             Console.ReadKey();
             return;
@@ -173,7 +173,7 @@ namespace Snake_by_JtH
             String CurrentSpeed = (9 - (Int32)(Math.Log(Program.Speed / 1000) / Math.Log(2))).ToString();
             Console.Clear();
             Console.WriteLine("设置/速度设置");
-            Console.WriteLine("------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine($"|     请输入一位整数(0: 最慢  9: 最快)        当前速度: {CurrentSpeed}                                            |");
 
@@ -182,7 +182,7 @@ namespace Snake_by_JtH
                 Console.WriteLine("|                                                                                                    |");
             }
 
-            Console.WriteLine("------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
             Program.Speed = (Int32)Math.Pow(2, 57 - (Int32)Console.ReadKey(true).Key) * 1000;
             File.WriteAllText(@"./Settings/Speed", Program.Speed.ToString());
         }
@@ -194,7 +194,7 @@ namespace Snake_by_JtH
                 // 显示设置主菜单
                 Console.Clear();
                 Console.WriteLine("设置");
-                Console.WriteLine("------------------------------------------------------------------------------------------------------");
+                Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
                 Console.WriteLine("| 1.颜色设置                                                                                         |");
                 Console.WriteLine("| 2.速度设置                                                                                         |");
                 Console.WriteLine("| 3.关于                                                                                             |");
@@ -206,7 +206,7 @@ namespace Snake_by_JtH
                     Console.WriteLine("|                                                                                                    |");
                 }
 
-                Console.WriteLine("------------------------------------------------------------------------------------------------------");
+                Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
                 Console.WriteLine("按下对应数字键以进入");
                 Char Key = (Char)Console.ReadKey(true).Key;
 

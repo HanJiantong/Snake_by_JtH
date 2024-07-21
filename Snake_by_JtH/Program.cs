@@ -41,6 +41,8 @@ namespace Snake_by_JtH
             Console.Title = "Snake";
             Console.CursorVisible = false;
 
+            Start.MainStart();
+
             // 主游戏循环
             while (true)
             {

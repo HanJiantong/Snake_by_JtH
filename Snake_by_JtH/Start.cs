@@ -2,33 +2,27 @@ using System;
 
 namespace Snake_by_JtH
 {
-    class Fail
+    class Start
     {
-        public static void MainFail(Int32 Score)
+        public static void MainStart()
         {
-            // 清屏并显示游戏结束界面
             Console.Clear();
             Console.WriteLine("Snake");
             Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
-            // 绘制游戏结束界面的ASCII艺术
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
-            Console.WriteLine("|                                                                                                    |");
-            Console.WriteLine("|                         ___                      ___                                               |");
-            Console.WriteLine("|                        /                        /   \\                                              |");
-            Console.WriteLine("|                        |___              __     |   |                                              |");
-            Console.WriteLine("|                        |  /|  --| |-\\/- /  \\    |   | |   | /  \\ | _/                              |");
-            Console.WriteLine("|                        \\  || /  | | | | |--/    |   | \\  /  |--/  |                                |");
-            Console.WriteLine("|                         ---| \\__| | | | \\__     \\___/  \\/   \\__   |                                |");
-            Console.WriteLine("|                                   得分:{0}                                                       |", Score.ToString("D5"));
-            Console.WriteLine("|                                                                                                    |");
-            Console.WriteLine("|                                                                                                    |");
-            Console.WriteLine("|                                                                                                    |");
-            Console.WriteLine("|                                                                                                    |");
-            Console.WriteLine("|                                                                                                    |");
+            Console.WriteLine("|                        _______                                |                                    |");
+            Console.WriteLine("|                       /                                       |                                    |");
+            Console.WriteLine("|                      /                                        |                                    |");
+            Console.WriteLine("|                      \\                                        |                                    |");
+            Console.WriteLine("|                       \\_______      +------\\       ------+    |     /       ____                   |");
+            Console.WriteLine("|                               \\     |       \\     /      |    |____/       /    \\                  |");
+            Console.WriteLine("|                                \\    |       |    /       |    |    \\      /______\\                 |");
+            Console.WriteLine("|                                /    |       |    \\       |    |     \\     \\                        |");
+            Console.WriteLine("|                        _______/     |       |     \\______|    |      \\     \\____/                  |");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
@@ -36,12 +30,13 @@ namespace Snake_by_JtH
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
+            Console.WriteLine("|                                                                                                    |");
+            Console.WriteLine("|                                                                                                    |");
+            Console.WriteLine("|                                                                                                    |");
+            Console.WriteLine($"|    v{Program.Version}                                                                                          |");
             Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
-            Console.Write("请按任意键继续. . .");
-            Console.Beep();
-            Console.Beep();
+            Console.WriteLine("按任意键进入游戏");
             Console.ReadKey();
-            return;
         }
     }
 }
