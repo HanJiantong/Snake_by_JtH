@@ -156,21 +156,21 @@ namespace Snake_by_JtH
                 // 处理用户输入，改变蛇的方向
                 if (Console.KeyAvailable)
                 {
-                    ConsoleKeyInfo key = Console.ReadKey(true);
+                    ConsoleKeyInfo Key = Console.ReadKey(true);
 
-                    if ((key.Key == ConsoleKey.UpArrow || key.Key == ConsoleKey.W) && Direction != 2)
+                    if ((Key.Key == ConsoleKey.UpArrow || Key.Key == ConsoleKey.W) && Direction != 2)
                     {
                         Direction = 0;
                     }
-                    else if ((key.Key == ConsoleKey.LeftArrow || key.Key == ConsoleKey.A) && Direction != 3)
+                    else if ((Key.Key == ConsoleKey.LeftArrow || Key.Key == ConsoleKey.A) && Direction != 3)
                     {
                         Direction = 1;
                     }
-                    else if ((key.Key == ConsoleKey.DownArrow || key.Key == ConsoleKey.S) && Direction != 0)
+                    else if ((Key.Key == ConsoleKey.DownArrow || Key.Key == ConsoleKey.S) && Direction != 0)
                     {
                         Direction = 2;
                     }
-                    else if ((key.Key == ConsoleKey.RightArrow || key.Key == ConsoleKey.D) && Direction != 1)
+                    else if ((Key.Key == ConsoleKey.RightArrow || Key.Key == ConsoleKey.D) && Direction != 1)
                     {
                         Direction = 3;
                     }

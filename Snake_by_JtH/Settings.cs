@@ -117,7 +117,7 @@ namespace Snake_by_JtH
                 Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
                 Console.WriteLine("|                                                                                                    |");
                 Console.WriteLine("|     错误: 本功能暂不支持非Windows系统                                                              |");
-                
+
                 for (Int32 i = 0; i < 23; ++i)
                 {
                     Console.WriteLine("|                                                                                                    |");
@@ -170,21 +170,96 @@ namespace Snake_by_JtH
 
         static void SpeedSettings()
         {
-            String CurrentSpeed = (9 - (Int32)(Math.Log(Program.Speed / 1000) / Math.Log(2))).ToString();
-            Console.Clear();
-            Console.WriteLine("设置/速度设置");
-            Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
-            Console.WriteLine("|                                                                                                    |");
-            Console.WriteLine($"|     请输入一位整数(0: 最慢  9: 最快)        当前速度: {CurrentSpeed}                                            |");
-
-            for (Int32 i = 0; i < 23; ++i)
+            while (true)
             {
+                String CurrentSpeed = (9 - (Int32)(Math.Log(Program.Speed / 1000) / Math.Log(2))).ToString();
+                Console.Clear();
+                Console.WriteLine("设置/速度设置");
+                Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
                 Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine($"|     请键入一位整数(0: 最慢  9: 最快)        当前速度: {CurrentSpeed}                                            |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|    按下Esc以返回                                                                                   |");
+
+                for (Int32 i = 0; i < 19; ++i)
+                {
+                    Console.WriteLine("|                                                                                                    |");
+                }
+
+                Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
+                ConsoleKeyInfo Key = Console.ReadKey(true);
+                if (Key.Key == ConsoleKey.Escape) break;
+                if (Key.KeyChar >= '0' && Key.KeyChar <= '9') Program.Speed = (Int32)Math.Pow(2, 57 - (Int32)Key.Key) * 1000;
+                File.WriteAllText(@"./Settings/Speed", Program.Speed.ToString());
             }
 
-            Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
-            Program.Speed = (Int32)Math.Pow(2, 57 - (Int32)Console.ReadKey(true).Key) * 1000;
-            File.WriteAllText(@"./Settings/Speed", Program.Speed.ToString());
+            return;
+        }
+
+        public static void CharSettings()
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("设置/字符设置");
+                Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|     下面是否是一个实心正方形        下面是否是一个小的实心正方形                                   |");
+                Console.WriteLine("|     ██                              ■                                                              |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|    Y: 是并启用Unicode字符显示                                                                      |");
+                Console.WriteLine("|    N: 否并关闭Unicode字符显示                                                                      |");
+                Console.WriteLine("|    当前: {0}                                                                                      |", Program.Unicode ? "启用" : "关闭");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|    按下Esc以返回                                                                                   |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("|                                                                                                    |");
+                Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
+                Console.Write("请键入字符(Y/N):");
+                ConsoleKeyInfo Key = Console.ReadKey(true);
+
+                if (Key.Key == ConsoleKey.Y)
+                {
+                    Program.Unicode = true;
+                    File.WriteAllText(@"./Settings/Unicode", "true");
+
+                    if (Program.FirstStart)
+                    {
+                        Program.FirstStart = false;
+                        break;
+                    }
+                }
+                else if (Key.Key == ConsoleKey.N)
+                {
+                    Program.Unicode = false;
+                    File.WriteAllText(@"./Settings/Unicode", "false");
+
+                    if (Program.FirstStart)
+                    {
+                        Program.FirstStart = false;
+                        break;
+                    }
+                }
+                else if (Key.Key == ConsoleKey.Escape) break;
+            }
+
+            return;
         }
 
         public static void MainSettings()
@@ -197,33 +272,38 @@ namespace Snake_by_JtH
                 Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
                 Console.WriteLine("| 1.颜色设置                                                                                         |");
                 Console.WriteLine("| 2.速度设置                                                                                         |");
-                Console.WriteLine("| 3.关于                                                                                             |");
+                Console.WriteLine("| 3.字符设置                                                                                         |");
+                Console.WriteLine("| 4.关于                                                                                             |");
                 Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("| 0.返回                                                                                             |");
-                
-                for (Int32 i = 0; i < 20; i++)
+                Console.WriteLine("| Esc.返回                                                                                           |");
+
+                for (Int32 i = 0; i < 19; i++)
                 {
                     Console.WriteLine("|                                                                                                    |");
                 }
 
                 Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
                 Console.WriteLine("按下对应数字键以进入");
-                Char Key = (Char)Console.ReadKey(true).Key;
+                ConsoleKeyInfo Key = Console.ReadKey(true);
 
                 // 根据用户输入进入相应的设置选项
-                if (Key == '1')
+                if (Key.KeyChar == '1')
                 {
                     ColorSettings();
                 }
-                else if (Key == '2')
+                else if (Key.KeyChar == '2')
                 {
                     SpeedSettings();
                 }
-                else if (Key == '3')
+                else if (Key.KeyChar == '3')
+                {
+                    CharSettings();
+                }
+                else if (Key.KeyChar == '4')
                 {
                     About();
                 }
-                else if (Key == '0')
+                else if (Key.Key == ConsoleKey.Escape)
                 {
                     break;
                 }

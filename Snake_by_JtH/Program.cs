@@ -11,6 +11,8 @@ namespace Snake_by_JtH
         public static Int32 Speed = 8000;
         // 是否使用Unicode字符
         public static Boolean Unicode = true;
+        // 是否是第一次启动
+        public static Boolean FirstStart = false;
 
         static void Main(String[] args)
         {
@@ -33,9 +35,17 @@ namespace Snake_by_JtH
             {
                 File.WriteAllText(@"./Settings/Speed", "10000");
             }
+            // 检查Unicode文件是否存在,不存在则创建
+            if (!File.Exists(@"./Settings/Unicode"))
+            {
+                File.WriteAllText(@"./Settings/Unicode", "true");
+                FirstStart = true;
+            }
 
             // 读取Speed文件并写入Speed变量
             Speed = Convert.ToInt32(File.ReadAllText(@"./Settings/Speed"));
+            // 读取Unicode文件并写入Unicode变量
+            Unicode = File.ReadAllText(@"./Settings/Unicode") == "true";
 
             // 设置控制台标题和隐藏光标
             Console.Title = "Snake";
@@ -48,21 +58,21 @@ namespace Snake_by_JtH
             {
                 // 显示主菜单并获取用户选择
                 Int32 n = Menu.MainMenu();
-
-                if (n == 0)
-                {
-                    break; // 退出游戏
-                }
-                else if (n == 1)
+                
+                if (n == 49)
                 {
                     // 开始新游戏
-                    Int32 score = Game.MainGame();
-                    Fail.MainFail(score);
+                    Int32 Score = Game.MainGame();
+                    Fail.MainFail(Score);
                 }
-                else if (n == 2)
+                else if (n == 50)
                 {
                     // 进入设置菜单
                     Settings.MainSettings();
+                }
+                if (n == 27)
+                {
+                    break; // 退出游戏
                 }
             }
 
