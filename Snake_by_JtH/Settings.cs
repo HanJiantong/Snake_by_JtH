@@ -177,7 +177,7 @@ namespace Snake_by_JtH
                 Console.WriteLine("设置/速度设置");
                 Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
                 Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine($"|     请键入一位整数(0: 最慢  9: 最快)        当前速度: {CurrentSpeed}                                            |");
+                Console.WriteLine($"|    请键入一位整数(0: 最慢  9: 最快)        当前速度: {CurrentSpeed}                                             |");
                 Console.WriteLine("|                                                                                                    |");
                 Console.WriteLine("|                                                                                                    |");
                 Console.WriteLine("|                                                                                                    |");
