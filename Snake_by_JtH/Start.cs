@@ -6,9 +6,11 @@ namespace Snake_by_JtH
     {
         public static void MainStart()
         {
+            // 清屏并显示游戏开始界面
             Console.Clear();
             Console.WriteLine("Snake");
             Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
+            // 绘制游戏开始界面的ASCII艺术
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
             Console.WriteLine("|                                                                                                    |");
