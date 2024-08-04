@@ -12,9 +12,9 @@ namespace Snake_by_JtH
             List[12, 24] = 2; // 蛇头初始位置
             List[13, 24] = 1; // 蛇身初始位置
             Boolean Alive = true; // 蛇是否存活
-            Int16 Head_i = 12, Head_j = 24; // 蛇头坐标
-            Int16 Food_i = -1, Food_j = -1; // 食物坐标
-            Boolean Length_changed = false; // 蛇长度是否改变
+            Int16 HeadX = 12, HeadY = 24; // 蛇头坐标
+            Int16 FoodX = -1, FoodY = -1; // 食物坐标
+            Boolean LengthChanged = false; // 蛇长度是否改变
             Int32 k = 0; // 用于控制游戏速度的计数器
 
             while (Alive)
@@ -22,10 +22,10 @@ namespace Snake_by_JtH
                 k++;
 
                 // 如果没有食物，随机生成新食物
-                if (Food_i == -1 && Food_j == -1)
+                if (FoodX == -1 && FoodY == -1)
                 {
-                    Food_i = (Int16)new Random().Next(2, 23);
-                    Food_j = (Int16)new Random().Next(2, 48);
+                    FoodX = (Int16)new Random().Next(2, 23);
+                    FoodY = (Int16)new Random().Next(2, 48);
                 }
 
                 // 根据游戏速度更新游戏状态
@@ -43,13 +43,13 @@ namespace Snake_by_JtH
                         for (Int16 j = 0; j < 50; j++)
                         {
                             // 处理食物逻辑
-                            if (i == Food_i && j == Food_j)
+                            if (i == FoodX && j == FoodY)
                             {
                                 if (List[i, j] > 0)
                                 {
                                     // 蛇吃到食物
-                                    Food_i = -1;
-                                    Food_j = -1;
+                                    FoodX = -1;
+                                    FoodY = -1;
                                     Score++;
                                     Console.Beep();
                                 }
@@ -63,20 +63,20 @@ namespace Snake_by_JtH
                             // 处理蛇头绘制
                             if (List[i, j] == Length)
                             {
-                                if (Length_changed)
+                                if (LengthChanged)
                                 {
                                     ++List[i, j];
                                 }
 
-                                Head_i = i;
-                                Head_j = j;
+                                HeadX = i;
+                                HeadY = j;
                                 Console.Write(Program.Unicode ? "██" : "><");
                                 List[i, j]--;
                             }
                             // 处理蛇身绘制
                             else if (List[i, j] > 0 && List[i, j] < Length)
                             {
-                                if (Length_changed)
+                                if (LengthChanged)
                                 {
                                     List[i, j]++;
                                 }
@@ -85,7 +85,7 @@ namespace Snake_by_JtH
                                 List[i, j]--;
                             }
                             // 绘制空白区域
-                            else if (!(i == Food_i && j == Food_j))
+                            else if (!(i == FoodX && j == FoodY))
                             {
                                 Console.Write("  ");
                             }
@@ -100,56 +100,56 @@ namespace Snake_by_JtH
                     // 根据方向移动蛇头，并检查是否撞墙或自身
                     if (Direction == 0) // 向上
                     {
-                        if ((Head_i - 1 < 0 || List[Head_i - 1, Head_j] != 0) && !Length_changed)
+                        if ((HeadX - 1 < 0 || List[HeadX - 1, HeadY] != 0) && !LengthChanged)
                         {
                             Alive = false;
                         }
                         else
                         {
-                            List[Head_i - 1, Head_j] = Length;
+                            List[HeadX - 1, HeadY] = Length;
                         }
                     }
                     else if (Direction == 1) // 向左
                     {
-                        if ((Head_j - 1 < 0 || List[Head_i, Head_j - 1] != 0) && !Length_changed)
+                        if ((HeadY - 1 < 0 || List[HeadX, HeadY - 1] != 0) && !LengthChanged)
                         {
                             Alive = false;
                         }
                         else
                         {
-                            List[Head_i, Head_j - 1] = Length;
+                            List[HeadX, HeadY - 1] = Length;
                         }
                     }
                     else if (Direction == 2) // 向下
                     {
-                        if ((Head_i + 1 > 24 || List[Head_i + 1, Head_j] != 0) && !Length_changed)
+                        if ((HeadX + 1 > 24 || List[HeadX + 1, HeadY] != 0) && !LengthChanged)
                         {
                             Alive = false;
                         }
                         else
                         {
-                            List[Head_i + 1, Head_j] = Length;
+                            List[HeadX + 1, HeadY] = Length;
                         }
                     }
                     else if (Direction == 3) // 向右
                     {
-                        if ((Head_j + 1 > 49 || List[Head_i, Head_j + 1] != 0) && !Length_changed)
+                        if ((HeadY + 1 > 49 || List[HeadX, HeadY + 1] != 0) && !LengthChanged)
                         {
                             Alive = false;
                         }
                         else
                         {
-                            List[Head_i, Head_j + 1] = Length;
+                            List[HeadX, HeadY + 1] = Length;
                         }
                     }
 
-                    Length_changed = false;
+                    LengthChanged = false;
 
                     // 每得3分增加蛇的长度
                     if (Score / 3 > Length - 2)
                     {
                         ++Length;
-                        Length_changed = true;
+                        LengthChanged = true;
                     }
                 }
 

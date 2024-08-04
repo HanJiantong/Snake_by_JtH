@@ -283,7 +283,7 @@ namespace Snake_by_JtH
                 }
 
                 Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
-                Console.WriteLine("按下对应数字键以进入");
+                Console.WriteLine("按下对应按键以选择");
                 ConsoleKeyInfo Key = Console.ReadKey(true);
 
                 // 根据用户输入进入相应的设置选项

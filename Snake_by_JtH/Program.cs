@@ -70,6 +70,11 @@ namespace Snake_by_JtH
                     // 进入设置菜单
                     Settings.MainSettings();
                 }
+                else if (n == 51)
+                {
+                    // 进入教程
+                    Guide.MainGuide();
+                }
                 if (n == 27)
                 {
                     break; // 退出游戏
