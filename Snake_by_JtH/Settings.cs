@@ -206,8 +206,8 @@ namespace Snake_by_JtH
                 Console.WriteLine("设置/字符设置");
                 Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
                 Console.WriteLine("|                                                                                                    |");
-                Console.WriteLine("|     下面是否是一个实心正方形        下面是否是一个小的实心正方形                                   |");
-                Console.WriteLine("|     ██                              ■                                                              |");
+                Console.WriteLine("|     下面是否是一个实心正方形    下面是否是一个小的实心正方形    下面是否是一个小的阴影正方形       |");
+                Console.WriteLine("|     ██                          ■                               ░░                                 |");
                 Console.WriteLine("|                                                                                                    |");
                 Console.WriteLine("|                                                                                                    |");
                 Console.WriteLine("|                                                                                                    |");
