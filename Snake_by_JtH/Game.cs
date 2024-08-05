@@ -95,7 +95,7 @@ namespace Snake_by_JtH
                     }
 
                     Console.WriteLine("+----------------------------------------------------------------------------------------------------+");
-                    Console.WriteLine("分数：{0}", Score.ToString("D5"));
+                    Console.WriteLine("分数: {0}", Score.ToString("D5"));
 
                     // 根据方向移动蛇头，并检查是否撞墙或自身
                     if (Direction == 0) // 向上
