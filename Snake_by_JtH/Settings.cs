@@ -262,6 +262,22 @@ namespace Snake_by_JtH
             return;
         }
 
+        static void ChangeLog()
+        {
+            Console.Clear();
+            Console.WriteLine("更新日志\n");
+            
+            try
+            {
+                Console.WriteLine(File.ReadAllText(@"./CHANGELOG"));
+            }
+            catch { }
+
+            Console.WriteLine("\n请按任意键继续. . .");
+            Console.ReadKey();
+            return;
+        }
+
         public static void MainSettings()
         {
             while (true)
@@ -274,10 +290,11 @@ namespace Snake_by_JtH
                 Console.WriteLine("| 2.速度设置                                                                                         |");
                 Console.WriteLine("| 3.字符设置                                                                                         |");
                 Console.WriteLine("| 4.关于                                                                                             |");
+                Console.WriteLine("| 5.更新日志                                                                                         |");
                 Console.WriteLine("|                                                                                                    |");
                 Console.WriteLine("| Esc.返回                                                                                           |");
 
-                for (Int32 i = 0; i < 19; i++)
+                for (Int32 i = 0; i < 18; i++)
                 {
                     Console.WriteLine("|                                                                                                    |");
                 }
@@ -302,6 +319,10 @@ namespace Snake_by_JtH
                 else if (Key.KeyChar == '4')
                 {
                     About();
+                }
+                else if (Key.KeyChar == '5')
+                {
+                    ChangeLog();
                 }
                 else if (Key.Key == ConsoleKey.Escape)
                 {
