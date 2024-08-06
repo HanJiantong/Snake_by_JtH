@@ -8,7 +8,7 @@ namespace Snake_by_JtH
         public static void MainGuide()
         {
             Int32 i = 0;
-            String Head = Program.Unicode ? "██" : "><", Body = Program.Unicode ? "░░" : "[]", Food = Program.Unicode ? "■ " : "~ ";
+            String Head = Program.Unicode ? "██" : "><", Body = Program.Unicode ? "▓▓" : "[]", Food = Program.Unicode ? "■ " : "~ ";
 
             while (true)
             {

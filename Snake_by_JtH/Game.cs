@@ -81,7 +81,7 @@ namespace Snake_by_JtH
                                     List[i, j]++;
                                 }
 
-                                Console.Write(Program.Unicode ? "░░" : "[]");
+                                Console.Write(Program.Unicode ? "▓▓" : "[]");
                                 List[i, j]--;
                             }
                             // 绘制空白区域

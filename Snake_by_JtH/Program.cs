@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Text;
 
 namespace Snake_by_JtH
 {
@@ -16,6 +17,8 @@ namespace Snake_by_JtH
 
         static void Main(String[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             // 尝试读取VERSION文件并写入Version变量
             try
             {
